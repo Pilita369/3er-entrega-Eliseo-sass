@@ -1,0 +1,66 @@
+// 🎨
+$rojo: #EB3635; 
+$turquesa: #38B5DD; 
+$gris: #4D4B4D;
+$fondo: #F4F4F4; 
+$color-texto: #333;
+$gradiente: linear-gradient(1deg, #eb3635 15%, #4d4b4d 80%);
+
+// Tipografía
+$fuente1:  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                  
+$fuente2: 'Footlight MT Light', 'Lucida Sans', 'Lucida Sans Regular'; 
+                
+ //centralizo los mixins
+ 
+ @import 'variables';
+
+// 📏 Mixin para media queries
+@mixin responsive($size) {
+    @if $size == tablet {
+        @media (max-width: 768px) { @content; }
+    } @else if $size == mobile {
+        @media (max-width: 480px) { @content; }
+    }
+}
+
+// 🎨 Mixin para botones personalizados
+@mixin boton($color-fondo, $color-texto) {
+    background-color: $color-fondo;
+    color: $color-texto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: $fuente1;
+    
+    &:hover {
+        background-color: darken($color-fondo, 10%);
+    }
+}
+
+// 📦 Mixin para contenedores flexibles
+@mixin flex($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+// 📝 Mixin para títulos
+@mixin titulo($size, $color, $fuente: $fuente2) {
+    font-size: $size;
+    color: $color;
+    font-weight: bold;
+    text-align: center;
+    font-family: $fuente;
+}
+
+
+
+
+// 📏 Tamaños y espaciados
+$espaciado-base: 16px;
+$ancho-maximo: 1200px;

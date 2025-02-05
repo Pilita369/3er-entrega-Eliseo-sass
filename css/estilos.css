@@ -1,0 +1,22 @@
+/* Error: This file is already being loaded.
+ *   ,--> sass\generales\_variables.scss
+ * 16|  @import 'variables';
+ *   |          ^^^^^^^^^^^ new load
+ *   '
+ *   ,--> sass\estilos.scss
+ * 1 | @import "generales/variables";
+ *   |         ===================== original load
+ *   '
+ *   sass\generales\_variables.scss 16:10  @import
+ *   sass\estilos.scss 1:9                 root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: This file is already being loaded.\a   \250c \2500 \2500 > sass\\generales\\_variables.scss\a 16\2502   @import 'variables';\d\a   \2502           ^^^^^^^^^^^ new load\a   \2575 \a   \250c \2500 \2500 > sass\\estilos.scss\a 1 \2502  @import \"generales/variables\";\d\a   \2502          \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original load\a   \2575 \a   sass\\generales\\_variables.scss 16:10  @import\a   sass\\estilos.scss 1:9                 root stylesheet";
+}

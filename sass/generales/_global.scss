@@ -1,0 +1,15 @@
+@import 'variables';
+
+body {
+    font-family: $fuente1;
+    color: $color-texto;
+    background-color: $color-fondo;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: $ancho-maximo;
+    margin: 0 auto;
+    padding: $espaciado-base;
+}

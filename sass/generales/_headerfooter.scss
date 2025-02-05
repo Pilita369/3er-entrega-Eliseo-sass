@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+
+header {
+    background-color: $gris;
+    padding: $espaciado-base;
+    
+    nav {
+        @include flex(space-between, center);
+        max-width: $ancho-maximo;
+        margin: auto;
+        
+        ul {
+            list-style: none;
+            display: flex;
+            gap: $espaciado-base;
+            padding: 0;
+
+            li {
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-family: $fuente1;
+                    font-weight: bold;
+                    padding: 10px 15px;
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: $turquesa;
+                    }
+                }
+            }
+        }
+    }
+}
+
