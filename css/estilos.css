@@ -16,7 +16,7 @@ header nav ul {
   justify-content: end;
   gap: 1rem;
   list-style: none;
-  margin: 0;
+  margin: 1rem;
   padding: 0;
 }
 header nav ul li a {
@@ -28,6 +28,30 @@ header nav ul li a {
 }
 header nav ul li a a:hover {
   color: #ffffff;
+}
+
+/* Footer */
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(1deg, #eb3635 15%, #eb3635 80%);
+  color: white;
+}
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+footer .social a img {
+  width: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+footer .social a img:hover {
+  transform: scale(1.2);
 }
 
 /* Body */
@@ -86,7 +110,7 @@ main .boton:hover {
 }
 .home .hero > div {
   background-color: #fff;
-  border: 4px solid #4d4b4d;
+  border: 4px solid #4D4B4D;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -110,8 +134,8 @@ main .boton:hover {
   width: 400px;
   height: 400px;
   margin: auto;
-  background-color: #4d4b4d;
-  border: 4px solid #4d4b4d;
+  background-color: #4D4B4D;
+  border: 4px solid #4D4B4D;
   border-radius: 10px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.52);
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.52);
@@ -119,7 +143,7 @@ main .boton:hover {
   margin-bottom: 20px;
 }
 .home .carousel-inner {
-  border: 4px solid #4d4b4d;
+  border: 4px solid #4D4B4D;
   border-radius: 10px;
   margin-bottom: 60px;
 }/*# sourceMappingURL=estilos.css.map */
