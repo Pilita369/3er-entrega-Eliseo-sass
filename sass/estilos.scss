@@ -3,11 +3,11 @@
 
 /* Header */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem;
-    background: linear-gradient(1deg, #eb3635 15%, #eb3635 80%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: $gradiente;
     img {
         width: 200px;
      }
@@ -17,7 +17,7 @@ header {
         justify-content: end;
         gap: 1rem;
         list-style: none;
-        margin: 0;
+        margin: 1rem;
         padding: 0;
 
             li a{
@@ -25,7 +25,7 @@ header {
          
             color: #38B5DD;
             font-family: Footlight MT Light;
-            font-size: 1.2rem;
+            font-size: 2rem;
             transition: color 0.3s;
 
             a:hover {
@@ -81,7 +81,7 @@ main {
       padding: 60px;
   
       &:hover {
-        background: #eb3635;
+        background: $rojo;
       }
     }
   }

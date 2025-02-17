@@ -381,8 +381,9 @@ footer .social a img:hover {
 }
 
 /* Responsive Design */
+/* Tablets y small laptops */
 @media (max-width: 768px) {
-   /* Tablets y small laptops */
+   
    header {
        grid-template-columns: 1fr;
        text-align: center;
@@ -401,9 +402,9 @@ footer .social a img:hover {
        text-align: center;
    }
 }
-
+/* Smartphones */
 @media (max-width: 480px) {
-   /* Smartphones */
+   
    nav ul li a {
        font-size: 1rem;
    }
