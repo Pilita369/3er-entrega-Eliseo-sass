@@ -1,4 +1,6 @@
-// 🎨
+
+//📌colores
+
 $rojo: #EB3635; 
 $turquesa: #38B5DD; 
 $gris: #4D4B4D;
@@ -6,61 +8,77 @@ $fondo: #F4F4F4;
 $color-texto: #333;
 $gradiente: linear-gradient(1deg, #eb3635 15%, #eb3635 80%);
 
-// Tipografía
-$fuente1:  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                  
-$fuente2: 'Footlight MT Light', 'Lucida Sans', 'Lucida Sans Regular'; 
-                
- //centralizo los mixins
- 
- @import 'variables';
 
-// 📏 Mixin para media queries
-@mixin responsive($size) {
-    @if $size == tablet {
-        @media (max-width: 768px) { @content; }
-    } @else if $size == mobile {
-        @media (max-width: 480px) { @content; }
-    }
-}
+//📌fuentes
 
-// 🎨 Mixin para botones personalizados
-@mixin boton($color-fondo, $color-texto) {
-    background-color: $color-fondo;
-    color: $color-texto;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: $fuente1;
-    
-    &:hover {
-        background-color: darken($color-fondo, 10%);
-    }
-}
+$fuente1: 'Lucida Sans', 'Lucida Sans Regular';
+$fuente2: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$fuente3: Footlight MT Light;
+$espaciado: 20px;
 
-// 📦 Mixin para contenedores flexibles
-@mixin flex($justify: center, $align: center, $direction: row) {
+
+// 📌 Mixin para centrar elementos en columna
+@mixin centrar-column() {
     display: flex;
-    justify-content: $justify;
-    align-items: $align;
-    flex-direction: $direction;
+    flex-direction: column;
+    align-items: center;
+ }
+
+// 📌 Tamaños y espaciados
+$ancho-gallery: 400px;
+$alto-gallery: 400px;
+$espaciado-bajo: 10px;
+$espaciado-general: 20px;
+
+// 📌 Bordes y sombras
+$radio-borde: 10px;
+$grosor-borde: 4px;
+$sombra: 10px 10px 5px 0px rgba(0, 0, 0, 0.52);
+
+// 📌 Mixin para centrar elementos con flexbox en columna
+@mixin centrar-flex() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-// 📝 Mixin para títulos
-@mixin titulo($size, $color, $fuente: $fuente2) {
-    font-size: $size;
-    color: $color;
-    font-weight: bold;
+// 📌 Mixin para aplicar bordes redondeados
+@mixin bordes-redondeados() {
+    border-radius: $radio-borde;
+    border: $grosor-borde solid $gris;
+}
+
+// 📌 Mixin para aplicar sombra
+@mixin sombra-box() {
+    box-shadow: $sombra;
+    -webkit-box-shadow: $sombra;
+    -moz-box-shadow: $sombra;
+}
+
+/* Estilo para títulos */
+.titulo-gallery {
+    margin-bottom: $espaciado-bajo;
+    color: black;
     text-align: center;
-    font-family: $fuente;
+    font-size: 40px;
 }
 
+/* Estilos para la galería */
+.gallery {
+    @include centrar-flex();
+    width: $ancho-gallery;
+    height: $alto-gallery;
+    margin: auto;
+    padding: auto;
+    background-color: $gris;
+    @include bordes-redondeados();
+    @include sombra-box();
+    margin-bottom: $espaciado-general;
+}
 
+/* Estilos para el carrusel */
+.carousel-inner {
+    @include bordes-redondeados();
+}
 
-
-// 📏 Tamaños y espaciados
-$espaciado-base: 16px;
-$ancho-maximo: 1200px;

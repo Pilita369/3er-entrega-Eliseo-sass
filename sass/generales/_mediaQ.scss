@@ -1,19 +1,116 @@
-@import 'mixins';
+// 📌 Media Queries responsivas
 
-.container {
-    width: 80%;
-
-    @include responsive(tablet) {
-        width: 90%;
+// 🌍 Extra pequeño (Móviles pequeños) 
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
     }
 
-    @include responsive(mobile) {
-        width: 100%;
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 8px;
     }
 }
 
-h1 {
-    @include responsive(mobile) {
-        font-size: 24px;
+// 📱 Pequeño (Smartphones en vertical y algunos en horizontal)
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+// 📲 Mediano (Tablets y móviles grandes en horizontal)
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+// 🖥️ Grande (Laptops y escritorios pequeños)
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    footer {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
+// 🖥️📺 Extra grande (Monitores grandes)
+@media screen and (min-width: 1201px) {
+    body {
+        font-size: 22px;
+    }
+
+    header {
+        padding: 25px;
+    }
+
+    main {
+        padding: 30px;
+    }
+
+    footer {
+        font-size: 20px;
+        padding: 20px;
     }
 }

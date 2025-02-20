@@ -1,0 +1,11 @@
+/* Main */
+/* Nosotros */
+.boton {
+    @include centrar-column(); // Usa el mixin para centrar en columna
+    padding: $espaciado * 3; // 60px (20px * 3)
+    margin-bottom: $espaciado * 3;
+    
+    &:hover {
+       background: $rojo; // Usa la variable de color rojo
+    }
+ }
