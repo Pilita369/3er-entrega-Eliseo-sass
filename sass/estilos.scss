@@ -27,12 +27,12 @@ header{
             li a{
             text-decoration: none;
          
-            color: #38B5DD;
+            color: $turquesa;
             font-family: $fuente3;
             font-size: 2rem;
             transition: color 0.3s;
 
-            a:hover {
+            &:hover {
                 color: $fondo;
              }
          }
@@ -61,6 +61,7 @@ h1, h2 {
 .cuerpo {
   font-family: $fuente3;
 }
+
 
 
 
@@ -93,6 +94,39 @@ footer {
   }
 }
 
+
+/*home*/
+.eliseo {
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px; /* Espaciado interno de la sección */
+   background-color: #f9f9f9; /* Color de fondo opcional para la sección */
+}
+
+.hero {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); /* Divide en 3 columnas iguales */
+   gap: 20px; /* Espaciado entre las cajas */
+   padding: 20px; /* Espaciado interno de la sección */
+   background-color: #f9f9f9; /* Color de fondo opcional para la sección */
+}
+
+.hero > div {
+   background-color: #fff; /* Fondo blanco para cada caja */
+   border: 4px solid #4d4b4d; /* Borde de color alrededor de cada caja */
+   border-radius: 10px; /* Bordes redondeados (opcional) */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+   padding: 20px; /* Espaciado interno dentro de cada caja */
+   text-align: center; /* Centra el texto */
+}
+
+
+.hero p {
+   color: #666; /* Color del texto */
+   font-size: 0.95em; /* Tamaño del texto */
+}
 
 
  
