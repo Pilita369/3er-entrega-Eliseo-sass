@@ -1,0 +1,52 @@
+/* Estilo del blog en 2 columnas */
+.blog-contenedor {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Columna de texto más grande, imagen más pequeña */
+    gap: 40px;
+    padding: 60px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+ }
+ 
+ /* Estilos del artículo */
+ .articulo-blog {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+ }
+ 
+ .articulo-blog h2 {
+    font-size: 2rem;
+    color: #eb3635;
+    margin-bottom: 10px;
+ }
+ 
+ .articulo-blog h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 20px;
+ }
+ 
+ .articulo-blog p {
+    font-size: 1.1rem;
+    color: #333;
+    text-align: justify;
+ }
+ 
+ .articulo-blog ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #444;
+ }
+ 
+ /* Estilo para la imagen */
+ .blog-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
