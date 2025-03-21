@@ -18,20 +18,26 @@
 </head>
 
 <body>
-    <header>
+  <header>
 
-     <img src="./medios/logoeliseo.trans.png" alt="logo elise">
+    <img src="./medios/logoeliseo.trans.png" alt="logo elise">
 
 
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="./page/nosotros.html">Nosotros</a></li>
-                <li><a href="./page/servicios.html">Servicios</a></li>
-                <li><a href="./page/blog.html">Blog</a></li>
-                <li><a href="./page/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <nav class="nav">
+      <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+      <ul id="nav-links">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="./page/nosotros.html">Nosotros</a></li>
+          <li><a href="./page/servicios.html">Servicios</a></li>
+          <li><a href="./page/blog.html">Blog</a></li>
+          <li><a href="./page/contacto.html">Contacto</a></li>
+      </ul>
+  </nav>
+    
+  
+   </header>
+    
+      
    
     </header>
     <main>
@@ -40,7 +46,7 @@
           <div class="video-placeholder">
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/V3ZgTiK8Elo" frameborder="0" allowfullscreen></iframe>
           </div>
-          </div>
+          
       </section>
 
       <!-- Tarjetas con imágenes y hover -->
@@ -130,4 +136,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('nav-links');
+    nav.classList.toggle('active');
+  }
+</script>
+
 </html>
