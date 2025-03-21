@@ -70,21 +70,7 @@ $sombra: 10px 10px 5px 0px rgba(66, 62, 62, 0.52);
     font-size: 40px;
 }
 
-/* Estilos para la galería */
-.gallery {
-    @include centrar-flex();
-    width: $ancho-gallery;
-    height: $alto-gallery;
-    margin: auto;
-    padding: auto;
-    background-color: $gris;
-    @include bordes-redondeados();
-    @include sombra-box();
-    margin-bottom: $espaciado-general;
-}
 
-/* Estilos para el carrusel */
-.carousel-inner {
-    @include bordes-redondeados();
-}
+
+
 
